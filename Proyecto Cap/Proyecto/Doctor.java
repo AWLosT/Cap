@@ -4,12 +4,14 @@ public class Doctor extends Contacto {
 	private String especial;
 	private String nombrehos;
 	private String direcch;
-	public Doctor(String nombre, String apellidoP, String apellidoM, String mediosCon, String fechadeN, String especial, String nombrehos, String direcch)
+	private String fechadeN;
+	public Doctor(String nombre, String apellidoP, String apellidoM, String mediosCon, String especial, String nombrehos, String direcch, String fechadeN)
 	{
-		super(nombre, apellidoP, apellidoM, mediosCon, fechadeN);
+		super(nombre, apellidoP, apellidoM, mediosCon);
 		this.especial=especial;
 		this.nombrehos=nombrehos;
 		this.direcch=direcch;
+		this.fechadeN=fechadeN;
 	}
 	
 	public void Set_Especial(String especial)
@@ -29,4 +31,10 @@ public class Doctor extends Contacto {
 	
 	public String Get_Direcch()
 	{return direcch;}
+	
+	public void Set_FechadeN(String fechadeN)
+	{this.fechadeN=fechadeN;}
+
+	public String Get_FechadeN()
+	{return fechadeN;}
 }
