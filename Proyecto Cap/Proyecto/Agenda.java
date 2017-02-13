@@ -139,7 +139,7 @@ if (contador==0) {
 	
 	if(encontrado)//Falta poner condicionales para todos y poner dependiendo el tipo de persona.
 	{
-		System.out.println("Que es lo que quieres modificar?: introduce 1: para el nombre, 2: para el apellido paterno, 3: para el medio de contacto");
+		System.out.println("Que es lo que quieres modificar?: introduce 1: para el nombre, 2: para el apellido paterno, 3: apellido materno, 4: para el medio de contacto, Otro:Salir");
         pedirdatos();
         String modifi = dato;
         switch (modifi) {
@@ -154,16 +154,21 @@ if (contador==0) {
 			System.out.println("Dame el nuevo apellido paterno");
 			pedirdatos();
 			String nuevoapp = dato;
-			this.lista[i].Set_Nombre(nuevoapp);
+			this.lista[i].Set_ApellidoP(nuevoapp);
 			break;
 			
 		case "3":
 			System.out.println("Dame el nuevo apellido materno");
 			pedirdatos();
 			String nuevoapm = dato;
-			this.lista[i].Set_Nombre(nuevoapm);
+			this.lista[i].Set_ApellidoM(nuevoapm);
 			break;
-			
+		case "4":
+			System.out.println("Dame el nuevo medio de contacto");
+			pedirdatos();
+			String medio = dato;
+			this.lista[i].Set_MediosCon(medio);
+			break;
 		default:
 			System.out.println("Introduce un valor correcto");
 			break;
