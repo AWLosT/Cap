@@ -108,11 +108,12 @@ if (this.contador == 0) {
 }	
 else {
 	for (int i = 0; i < contador; i++) {
-		System.out.printf("%-34s","|"+this.lista[i].Get_Nombre());
+		System.out.printf("%-33s","|"+"Nombre: "+ this.lista[i].Get_Nombre()+ " "+this.lista[i].Get_ApellidoP()+ " "+this.lista[i].Get_ApellidoM());
+		System.out.print("|");
 		System.out.println();
-		System.out.printf("%-34s","|"+this.lista[i].Get_ApellidoP());
-		System.out.println();
-		System.out.printf("%-34s","|"+this.lista[i].Get_MediosCon());
+		
+		System.out.printf("%-33s","|"+"Contacto: "+ this.lista[i].Get_MediosCon());
+		System.out.print("|");
 		System.out.println();
 		System.out.println("|________________________________|");
 	}
