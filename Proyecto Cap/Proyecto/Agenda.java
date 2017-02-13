@@ -51,8 +51,8 @@ public void ordenar()//Se usa el metodo burbuja
 	int n = this.contador;
 	String nombre1, nombre2;
     if (contador>=2) {
-    	for (int i = 0; i <= n-1; i++) {
-			for (int j = 0; j <= n-i; j++) {
+    	for (int i = 1; i <= n-1; i++) {
+			for (int j = 1; j <= n-i; j++) {
 				nombre1 = this.lista[j-1].Get_Nombre();
 				nombre2 = this.lista[j].Get_Nombre();
 				if (nombre1.charAt(0) > nombre2.charAt(0)) {
@@ -97,6 +97,26 @@ public void eliminar()
 	}
 	}
 	
+}
+//MOSTRAR
+public void mostrar()
+{
+if (this.contador == 0) {
+	System.out.println("|        NO HAY CONTACTOS        |");
+	System.out.println("|________________________________|");
+
+}	
+else {
+	for (int i = 0; i < contador; i++) {
+		System.out.printf("%-34s","|"+this.lista[i].Get_Nombre());
+		System.out.println();
+		System.out.printf("%-34s","|"+this.lista[i].Get_ApellidoP());
+		System.out.println();
+		System.out.printf("%-34s","|"+this.lista[i].Get_MediosCon());
+		System.out.println();
+		System.out.println("|________________________________|");
+	}
+}
 }
 //MODIFICAR
 public void modificar() {
